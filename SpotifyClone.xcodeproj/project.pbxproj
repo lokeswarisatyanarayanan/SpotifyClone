@@ -7,18 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C56169F626EDE83000498975 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56169F526EDE83000498975 /* Player.swift */; };
+		C56169F926EE027D00498975 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C56169F826EE027D00498975 /* Colors.xcassets */; };
+		C56169FE26EE26A900498975 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56169FD26EE26A900498975 /* Constants.swift */; };
+		C5616A0326EE278000498975 /* CornerRadius+ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5616A0226EE278000498975 /* CornerRadius+ViewModifier.swift */; };
+		C5616A0526EE388B00498975 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5616A0426EE388B00498975 /* Song.swift */; };
+		C5616A0826EE426800498975 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5616A0726EE426800498975 /* TabBarItem.swift */; };
+		C5616A0A26EE440500498975 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5616A0926EE440500498975 /* Info.plist */; };
 		C59CEB3426EBA62F002120AA /* SpotifyCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59CEB3326EBA62F002120AA /* SpotifyCloneApp.swift */; };
-		C59CEB3626EBA62F002120AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59CEB3526EBA62F002120AA /* ContentView.swift */; };
+		C59CEB3626EBA62F002120AA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59CEB3526EBA62F002120AA /* RootView.swift */; };
 		C59CEB3826EBA630002120AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59CEB3726EBA630002120AA /* Assets.xcassets */; };
 		C59CEB3B26EBA630002120AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59CEB3A26EBA630002120AA /* Preview Assets.xcassets */; };
+		C59CEB4326EBA650002120AA /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59CEB4226EBA650002120AA /* TabBar.swift */; };
+		C59CEB4526EBA7C3002120AA /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59CEB4426EBA7C3002120AA /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C56169F526EDE83000498975 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		C56169F826EE027D00498975 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C56169FD26EE26A900498975 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C5616A0226EE278000498975 /* CornerRadius+ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CornerRadius+ViewModifier.swift"; sourceTree = "<group>"; };
+		C5616A0426EE388B00498975 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		C5616A0726EE426800498975 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		C5616A0926EE440500498975 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C59CEB3026EBA62F002120AA /* SpotifyClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59CEB3326EBA62F002120AA /* SpotifyCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyCloneApp.swift; sourceTree = "<group>"; };
-		C59CEB3526EBA62F002120AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C59CEB3526EBA62F002120AA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		C59CEB3726EBA630002120AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C59CEB3A26EBA630002120AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C59CEB4226EBA650002120AA /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		C59CEB4426EBA7C3002120AA /* View+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +50,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C56169FC26EE269500498975 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C5616A0426EE388B00498975 /* Song.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C56169FF26EE275D00498975 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C56169FD26EE26A900498975 /* Constants.swift */,
+				C5616A0126EE276D00498975 /* ViewModifiers */,
+				C5616A0026EE276300498975 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C5616A0026EE276300498975 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C59CEB4426EBA7C3002120AA /* View+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C5616A0126EE276D00498975 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				C5616A0226EE278000498975 /* CornerRadius+ViewModifier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		C5616A0626EE425200498975 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C59CEB4226EBA650002120AA /* TabBar.swift */,
+				C5616A0726EE426800498975 /* TabBarItem.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		C59CEB2726EBA62F002120AA = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +112,14 @@
 		C59CEB3226EBA62F002120AA /* SpotifyClone */ = {
 			isa = PBXGroup;
 			children = (
+				C5616A0926EE440500498975 /* Info.plist */,
+				C56169FF26EE275D00498975 /* Helpers */,
+				C56169FC26EE269500498975 /* Models */,
+				C59CEB4126EBA63E002120AA /* Views */,
 				C59CEB3326EBA62F002120AA /* SpotifyCloneApp.swift */,
-				C59CEB3526EBA62F002120AA /* ContentView.swift */,
+				C59CEB3526EBA62F002120AA /* RootView.swift */,
 				C59CEB3726EBA630002120AA /* Assets.xcassets */,
+				C56169F826EE027D00498975 /* Colors.xcassets */,
 				C59CEB3926EBA630002120AA /* Preview Content */,
 			);
 			path = SpotifyClone;
@@ -65,6 +131,15 @@
 				C59CEB3A26EBA630002120AA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C59CEB4126EBA63E002120AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C5616A0626EE425200498975 /* TabBar */,
+				C56169F526EDE83000498975 /* Player.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +200,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5616A0A26EE440500498975 /* Info.plist in Resources */,
+				C56169F926EE027D00498975 /* Colors.xcassets in Resources */,
 				C59CEB3B26EBA630002120AA /* Preview Assets.xcassets in Resources */,
 				C59CEB3826EBA630002120AA /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +214,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C59CEB3626EBA62F002120AA /* ContentView.swift in Sources */,
+				C59CEB3626EBA62F002120AA /* RootView.swift in Sources */,
+				C59CEB4326EBA650002120AA /* TabBar.swift in Sources */,
+				C5616A0526EE388B00498975 /* Song.swift in Sources */,
+				C5616A0826EE426800498975 /* TabBarItem.swift in Sources */,
+				C59CEB4526EBA7C3002120AA /* View+Extension.swift in Sources */,
+				C56169F626EDE83000498975 /* Player.swift in Sources */,
 				C59CEB3426EBA62F002120AA /* SpotifyCloneApp.swift in Sources */,
+				C56169FE26EE26A900498975 /* Constants.swift in Sources */,
+				C5616A0326EE278000498975 /* CornerRadius+ViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,12 +355,15 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SpotifyClone/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpotifyClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,12 +387,15 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SpotifyClone/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpotifyClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
