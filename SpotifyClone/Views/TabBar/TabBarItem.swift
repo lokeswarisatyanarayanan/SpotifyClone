@@ -12,6 +12,12 @@ struct TabItem {
     let title: String
 }
 
+enum TabItems: Int, CaseIterable {
+    case home
+    case search
+    case library
+}
+
 struct TabBarItem: View {
     let isActive: Bool
     let item: TabItem

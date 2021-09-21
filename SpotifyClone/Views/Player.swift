@@ -20,6 +20,40 @@ struct Player: View {
     @State var sliderValue: CGFloat = 0
     @State var isSliderEditing: Bool = false
     
+    var body: some View {
+        ZStack {
+            Color("Gray80")
+                .cornerRadius(radius: Spacing.small,
+                              corners: isExpanded ? [.topLeft, .topRight] : [.allCorners])
+                .frame(maxHeight: height)
+            HStack(spacing: Spacing.small) {
+                VStack(alignment: .leading) {
+                    thumbnailImage
+                    if(isExpanded) {
+                        expandedPlayerContent
+                    }
+                }
+                .padding([.top, .horizontal],
+                         isExpanded ? Spacing.medium : 0)
+                if (isExpanded == false) {
+                    collapsedPlayerContent
+                }
+            }
+            .padding(Spacing.small)
+        }
+        .padding(.horizontal, isExpanded ? 0: Spacing.small)
+        .offset(y: yOffset)
+        .onTapGesture {
+            withAnimation(.linear(duration: 0.2)) {
+                isExpanded.toggle()
+                updatePlayerLayout()
+            }
+        }
+        .gesture(DragGesture()
+                    .onChanged(onDragGestureChange(value:))
+                    .onEnded(onDragGestureEnd(value:)))
+    }
+    
     var thumbnailImage: some View {
         Image(song.assetIdentifier)
             .resizable()
@@ -27,6 +61,7 @@ struct Player: View {
                    height: thumbnailImageHeight,
                    alignment: .leading)
             .cornerRadius(Spacing.small)
+            .padding(.top, isExpanded ? 50 : 0)
     }
     
     var collapsedPlayerContent: some View {
@@ -93,55 +128,20 @@ struct Player: View {
         }
     }
     
-    var body: some View {
-        ZStack {
-            Color("Gray80")
-                .cornerRadius(radius: Spacing.small,
-                              corners: isExpanded ? [.topLeft, .topRight] : [.allCorners])
-                .frame(maxHeight: height)
-            HStack(spacing: Spacing.small) {
-                VStack(alignment: .leading) {
-                    thumbnailImage
-                    if(isExpanded) {
-                        expandedPlayerContent
-                    }
-                }
-                .padding([.top, .horizontal],
-                         isExpanded ? Spacing.medium : 0)
-                if (isExpanded == false) {
-                    collapsedPlayerContent
-                }
-            }
-            .padding(Spacing.small)
-        }
-        .padding(.horizontal, isExpanded ? 0: Spacing.small)
-        .offset(y: yOffset)
-        .onTapGesture {
-            withAnimation(.linear(duration: 0.2)) {
-                isExpanded.toggle()
-                updatePlayerLayout()
-            }
-        }
-        .gesture(DragGesture()
-                    .onChanged(onDragGestureChange(value:))
-                    .onEnded(onDragGestureEnd(value:)))
-    }
-    
     func onDragGestureChange(value: DragGesture.Value) {
         if (isSliderEditing == false) {
             isDragInProgress = true
+            let translationHeight = abs(value.translation.height) + height
             if value.translation.height > 0 && isExpanded {
                 yOffset = value.translation.height
             } else {
                 yOffset = value.translation.height
-                height = abs(-yOffset + height)
+                height = translationHeight
                 thumbnailImageWidth = height/2
                 thumbnailImageHeight = height/2
-                if (height > PlayerLayoutValues.Expanded.height - PlayerLayoutValues.threshold) {
-                    withAnimation(.interactiveSpring()) {
-                        isExpanded = true
-                        updatePlayerLayout()
-                    }
+                if (height > PlayerLayoutValues.Expanded.height/2) {
+                    isExpanded = true
+                    updatePlayerLayout()
                 }
             }
         }

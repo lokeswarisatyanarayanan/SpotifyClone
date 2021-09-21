@@ -12,22 +12,38 @@ struct RootView: View {
     let tabItems = [TabItem(assetName: "house", title: "Home"),
                     TabItem(assetName : "magnifyingglass", title: "Search"),
                     TabItem(assetName: "books.vertical", title: "Library")]
+    
     @State var isPlayerExpanded: Bool = false
+    @State var activeTab: TabItems = .home
     
     var body: some View {
         GeometryReader { proxy in
-            //Todo: Navigate to appropriate views
-            VStack(spacing: Spacing.small) {
-                Spacer()
+            VStack {
+                if (isPlayerExpanded == false) {
+                    switch (activeTab) {
+                    case .home :
+                        HomeScreen()
+                    case .search:
+                        SearchScreen()
+                    case .library:
+                        LibraryScreen()
+                    }
+                }
                 Player(isExpanded: $isPlayerExpanded)
                 TabBar(tabItems: tabItems,
-                       size: proxy.size)
-                    .frame(height: isPlayerExpanded ? 0 : 60)
+                       size: proxy.size,
+                       activeTab: $activeTab)
+                    .frame(height: isPlayerExpanded ? 0 : TabLayoutValues.height)
                     .opacity(isPlayerExpanded ? 0 : 1)
             }
-            .background(LinearGradient(colors:[Color(uiColor: .darkGray),.black],
+            .background(isPlayerExpanded ?
+                        LinearGradient(colors:[Color("Gray80"),.black],
                                        startPoint: .top,
-                                       endPoint: .bottom))
+                                       endPoint: .bottom) :
+                            LinearGradient(colors:[.black, .black],
+                                           startPoint: .top,
+                                           endPoint: .bottom))
+            .edgesIgnoringSafeArea(isPlayerExpanded ? .all : [])
         }
     }
 }
