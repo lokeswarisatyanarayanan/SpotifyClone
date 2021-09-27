@@ -21,24 +21,7 @@ struct BlendAlbumCover: View {
         ZStack {
             Color("blend-" + "\(mode.rawValue)" + "-background")
             VStack(spacing: 0) {
-                GeometryReader { proxy in
-                    Group {
-                        Color("blend-" + "\(mode.rawValue)" + "-primary")
-                            .clipShape(Circle())
-                            .frame(width: 60, height: 60, alignment: .center)
-                            .offset(x: -15, y: 15)
-                        Color("blend-" + "\(mode.rawValue)" + "-secondary").opacity(0.6)
-                            .clipShape(Circle())
-                            .frame(width: 60, height: 60, alignment: .center)
-                            .offset(x: 15, y: -15)
-                    }
-                    .frame(width: 100,
-                           height: 100,
-                           alignment: .center)
-                }
-                .frame(width: 100,
-                       height: 100,
-                       alignment: .center)
+                BlendOverlappingCircleView(mode: mode, size: 120)
                 HStack {
                     VStack(alignment: .leading, spacing: 2) {
                         Text("Blend").font(.body).fontWeight(.semibold).foregroundColor(.white)
@@ -48,7 +31,6 @@ struct BlendAlbumCover: View {
                     Spacer()
                 }
                 .frame(height: 20, alignment: .leading)
-                .offset(y: 10)
             }
         }
         .frame(width: 150,

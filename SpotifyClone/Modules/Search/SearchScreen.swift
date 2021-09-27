@@ -34,7 +34,7 @@ struct SearchScreen: View {
     }
     
     private func blendRow(mode: BlendAlbumCoverMode, title: String, description: String) -> some View {
-        NavigationLink(destination: Color.pink) {
+        NavigationLink(destination: BlendDetailView()) {
             VStack {
                 BlendAlbumCover(mode: mode)
                 VStack {

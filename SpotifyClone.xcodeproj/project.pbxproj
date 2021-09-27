@@ -27,6 +27,7 @@
 		C5AF313B26F8CF7C00743DDA /* MusicPlayingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AF313A26F8CF7C00743DDA /* MusicPlayingIndicator.swift */; };
 		C5AF313F26F8D4D400743DDA /* BlendAlbumCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AF313E26F8D4D400743DDA /* BlendAlbumCover.swift */; };
 		C5AF314226F90A3400743DDA /* BlendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AF314126F90A3400743DDA /* BlendDetailView.swift */; };
+		C5AF314426F9851E00743DDA /* BlendOverlappingCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AF314326F9851E00743DDA /* BlendOverlappingCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		C5AF313A26F8CF7C00743DDA /* MusicPlayingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayingIndicator.swift; sourceTree = "<group>"; };
 		C5AF313E26F8D4D400743DDA /* BlendAlbumCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendAlbumCover.swift; sourceTree = "<group>"; };
 		C5AF314126F90A3400743DDA /* BlendDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendDetailView.swift; sourceTree = "<group>"; };
+		C5AF314326F9851E00743DDA /* BlendOverlappingCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendOverlappingCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				C5AF313E26F8D4D400743DDA /* BlendAlbumCover.swift */,
+				C5AF314326F9851E00743DDA /* BlendOverlappingCircleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			files = (
 				C59CEB3626EBA62F002120AA /* RootView.swift in Sources */,
 				C59CEB4326EBA650002120AA /* TabBar.swift in Sources */,
+				C5AF314426F9851E00743DDA /* BlendOverlappingCircleView.swift in Sources */,
 				C5616A0526EE388B00498975 /* Song.swift in Sources */,
 				C5616A0826EE426800498975 /* TabBarItem.swift in Sources */,
 				C5AF313B26F8CF7C00743DDA /* MusicPlayingIndicator.swift in Sources */,
